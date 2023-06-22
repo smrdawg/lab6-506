@@ -1,0 +1,19 @@
+version: '3'
+services:
+  freeradius:
+    build:
+      context: ./Freeradius
+    networks:
+      - freeradius
+
+  flaskapp:
+    build:
+      context: ./flaskapp
+    ports:
+      - 5000:5000
+    networks:
+      - freeradius
+
+networks:
+  freeradius:
+    driver: bridge
