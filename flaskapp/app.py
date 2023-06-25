@@ -6,7 +6,7 @@ from pyrad import packet
 app = Flask(__name__)
 
 # Configure RADIUS server details
-RADIUS_SERVER = '172.17.0.2'
+RADIUS_SERVER = 'freeradius
 RADIUS_SECRET = b'radius_secret'
 dictionary = Dictionary("dictionary")
 # Configure Flask secret key for session
